@@ -28,7 +28,7 @@ with tf.gfile.FastGFile('output_graph.pb', 'rb') as f:
     tf.import_graph_def(graph_def, name='')
 
 
-
+# 调用faceNet中的mtcnn 裁剪人脸
 align_dataset_mtcnn.main(align_dataset_mtcnn.parse_arguments(sys.argv[1:]))
 
 with tf.Session() as sess:
